@@ -9,37 +9,94 @@
 !importtant 最高级别
 
 background(背景色)
+
 background-color => 背景色
 background-image =>背景图片
 background-repeat => 背景图像(水平或垂直)
 background-attachment=>背景图像是否固定或者随页面滚动
 background-position=>设置背景图片的起始位置
+background-clip=>指定区域
 
 text(文本)
+color =>颜色
+line-height =>行高
+text-direction =>添加文本修饰
+text-indent =>缩进元素中的文本
+white-space =>设置空白的处理试
+vertical-aligh=>垂直对齐
+text-transform=>切换大小写
 
 font(字体)
+font-size =>字体大小
+font-style=>字体风格
+font-weight=>字体粗细
+
 
 link(链接)
+hover =>正常
+vistied =>访问
+link =>悬停
+active=>点击时
 
 ul(列表)
+list-style-type
+list-style-postion 
+list-style-image
 
 table(表格)
 
 box(盒子模型)
 
 border(边框)
+border:1px solid #fff;
 
 outline(轮廓)
+outline:#fff solid 1px;
 
 margin(外边距)
+margin : auto 0;
 
 padding(填充)
+padding :atuo 0;
 
-分级与嵌套
+分组与嵌套
 
-尺寸
+分组选择器,以逗号分隔
+h1,h2,h3{color:#FFF;}
+h1 p{color:red;}
+
+
+尺寸(dimension))
+height
+line-height 
+max-height 
+max-width 
+min-height 
+min-width
+width
 
 显示与隐藏(display/visibility)
+
+display =>none
+visiblity=>hidden
+区别
+ visibility:hidden可以隐藏某个元素，但隐藏的元素仍需占用与未隐藏之前一样的空间。也就是说，该元素虽然被隐藏了，但仍然会影响布局。
+
+内联元素=>块级元素
+span,a{display:block;}
+
+块级元素=>内联元素
+div{display:inline;}
+
+
+元素的内联元素
+
+元素的块级元素
+
+
+
+一个表的collapse属性
+
 
 position(定位)
 

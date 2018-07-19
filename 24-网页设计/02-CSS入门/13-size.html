@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>内联元素与块级元素的区别</title>
+    <style type="text/css">
+        ul li a {
+            text-decoration-line: none;
+        }
+        
+        ul li a:hover {
+            color: red;
+        }
+        
+        ul li a:active {
+            color: purple;
+        }
+        
+        ul li {
+            display: inline;
+            /*设置成内联元素*/
+        }
+        /*将内联元素设置块元素*/
+        
+        span {
+            display: block;
+        }
+        
+        table {
+            border-collapse: collapse;
+        }
+        
+        table,
+        td,
+        th {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <p>Display this link list as a horizontal menu:</p>
+
+    <ul>
+        <li>
+            <a href="/html/" target="_blank">HTML</a>
+        </li>
+        <li>
+            <a href="/css/" target="_blank">CSS</a>
+        </li>
+        <li>
+            <a href="/js/" target="_blank">JavaScript</a>
+        </li>
+        <li>
+            <a href="/xml/" target="_blank">XML</a>
+        </li>
+    </ul>
+
+
+    <h2>Nirvana</h2>
+    <span>Record: MTV Unplugged in New York</span>
+    <span>Year: 1993</span>
+    <h2>Radiohead</h2>
+    <span>Record: OK Computer</span>
+    <span>Year: 1997</span>
+
+
+    <table>
+        <tr>
+            <td>Peter</td>
+            <td>Griffin</td>
+        </tr>
+        <tr class="collapse">
+            <td>Lois</td>
+            <td>Griffin</td>
+        </tr>
+    </table>
+
+    <p>
+        <b>注意:</b> IE8 以及更早版本的浏览器当仅定义一个!DOCTYPE时会崩溃:</p>
+
+
+</html>
