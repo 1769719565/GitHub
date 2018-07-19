@@ -1,0 +1,88 @@
+/*
+ css定义
+ 1.行内样式
+ 2.内嵌样式
+ 3.链接样式 
+ 4.导入样式=>import url(../path/style.css)
+
+行内样式->内嵌样式->导入样式->链接样式
+!importtant 最高级别
+
+background(背景色)
+background-color => 背景色
+background-image =>背景图片
+background-repeat => 背景图像(水平或垂直)
+background-attachment=>背景图像是否固定或者随页面滚动
+background-position=>设置背景图片的起始位置
+
+text(文本)
+
+font(字体)
+
+link(链接)
+
+ul(列表)
+
+table(表格)
+
+box(盒子模型)
+
+border(边框)
+
+outline(轮廓)
+
+margin(外边距)
+
+padding(填充)
+
+分级与嵌套
+
+尺寸
+
+显示与隐藏(display/visibility)
+
+position(定位)
+
+float(浮动)
+
+水平对齐(horizontal aligh)
+
+组合选择器
+
+伪类
+
+伪元素
+
+导航栏
+
+下拉菜单 
+
+图片源
+
+图像透明度
+
+图像拼合技术
+
+媒体类型
+
+总结 
+
+实例
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*/

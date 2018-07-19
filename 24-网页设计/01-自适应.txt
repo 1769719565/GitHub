@@ -1,0 +1,55 @@
+页面做成自适应的几种方法
+
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+1=>页面中的宽度都使用百分比
+
+ (1)页面中的盒子的高度都不能设置固定高度,其次高度应该由内容去撑起,故此不管如何缩小,内容都不会溢出
+ (2)百分比是按照父元素的宽度计算的.包括margin,padding,也是除以父元素的高度,水平方向设置成百分比
+ (3)字体的大小采用rem单位来设置
+ (4)使用媒体查询来根据不同的屏幕尺寸来应用不同的样式
+ 
+
+
+2=>页面所有的尺寸都使用rem单位来换算
+
+@media only screen and (max-width:500px){
+	body{
+		background-color:lightblue;
+	}
+}
+
+
+2=>页面所有的尺寸用rem单位来设置 1rem =16px;
+ <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+ <meta name="format-dection" content="telephone=no"/>
+ <script type="text/javascript">
+     !function(a){function b(){
+	var b=a.document,c=b.documentElement,d=c.getBoundingClientRect().width;document.documentElement.style.fontSize=20*(d/360)+"px"}window.addEventListener("DOMContentLoaded",function(){b()},!1),window.addEventListener("resize",function(){b()}),b()}(window);
+ </script>
+ 
+ 
+ 3=>采用流式布局
+ 
+ .main{float:right;width:75px;}
+ .leftBar{float:left;width:25px;}
+ 
+ float 的作用,如果宽度太小,不能放下两个元素,后面的元素自动滚动到前面元素的下方,
+ 不会在水平方向overflow(溢出),避免滚动条的出现
+ 
+ 5=>适应网页设计的核心,就是css3引入的mediaQuery 模块
+ 自动探测屏幕宽度,然后加载相应的css文件
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
