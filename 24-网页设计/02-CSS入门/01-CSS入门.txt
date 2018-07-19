@@ -90,15 +90,19 @@ div{display:inline;}
 
 
 元素的内联元素
-
+span,p
 元素的块级元素
-
-
-
-一个表的collapse属性
-
+div
 
 position(定位)
+
+static 
+fixed 
+relative 
+absolute
+
+
+
 
 float(浮动)
 
