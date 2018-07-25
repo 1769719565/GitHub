@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>postion定位</title>
+    <style type="text/css">
+        /*
+     定位
+
+     static (默认)
+
+     fixed(元素位置相对于浏览器的窗口的固定位置，与文档流无关，故此不占据空间)
+
+     relative(元素位置是相对其正常位置,常用作绝对定位元素的容器块)
+
+     absoluted(相对于最近的已经定位的父级元素，如果未定义父级元素，则相对于html) 
+
+     z-index（重叠元素，较低的元素堆叠在前面）
+    
+    */
+
+        .container {
+            width: 100%;
+            margin: 0;
+            border: 1px solid #ccc;
+        }
+
+        .header,
+        .footer {
+            padding: 0.5em;
+            color: #fff;
+            background-color: #ccc;
+            clear: left;
+        }
+
+        .header {
+            margin: 0;
+            padding: 0;
+        }
+
+        .left {
+            float: left;
+            margin: 0;
+            width: 10em;
+            padding: 1em;
+        }
+
+        .content {
+            border-left: 1px solid #ccc;
+            padding: 1em;
+            margin-left: 11.875em;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1 class="header">w3cschool.cn</h1>
+        </div>
+        <div class="left">
+            <p>"Never increase, beyond what is necessary, the number of entities required to explain anything." William of Ockham
+                (1285-1349)
+            </p>
+        </div>
+        <div class="content">
+            <h2>Free Web Building Tutorials</h2>
+            <p>At w3cschool you will find all the Web-building tutorials you need, from basic HTML and XHTML to advanced XML,
+                XSL, Multimedia and WAP.</p>
+            <p>w3cschool - The Largest Web Developers Site On The Net!</p>
+        </div>
+
+        <div class="footer">Copyright 1999-2005 by Refsnes Data.</div>
+    </div>
+    </div>
+</body>
+
+</html>
