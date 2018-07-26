@@ -1,16 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>响应式布局</title>
+    <title>居中布局</title>
 
     <style type="text/css">
-    
+        /*
+      水平居中(块级)
+      margin:0 auto;
+
+      文字水平居中
+      line-height
+      height
+      text-align:center;
+
+    */
+
+        /*文字居中*/
+
+        .wrap {
+            border: 1px solid rgb(255, 165, 0);
+            height: 12.5em;
+            line-height: 12.5em;
+            text-align: center;
+            font-size: 120%;
+            background-color: #ccc;
+        }
+
+        .parent {
+            margin: 0 auto;
+            width: 12.5em;
+            height: 12.5em;
+            border: 1px solid #ff00ff;
+        }
+
+        .children {
+            height: 6.25em;
+            line-height: 6.25em;
+            text-align: center;
+            width: 6.25em;
+            padding: 3.125em;
+            background-color: #00ff00;
+            background-clip: content-box;
+            /*居中关键*/
+        }
+
+        #parent {
+            margin-top: 20px;
+            margin-left: auto;
+            margin-right: auto;
+            position: relative;
+            height: 12.5em;
+            width: 12.5em;
+            text-align: center;
+            border: 1px solid #ccbbaa;
+        }
+
+        #children {
+            background-color: #00ff00;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            height: 6.25em;
+            line-height: 6.25em;
+            width: 6.25em;
+            margin: -3.125em 0 0 -3.125em;
+        }
+
+        .img {
+            border: 1px solid rgb(0, 0, 255);
+            position: relative;
+            width: 100%;
+            height: 12.5em;
+        }
+
+        .img p {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            border: 1px solid rgb(0, 255, 255);
+        }
+
+        .hidden-img {
+            visibility: hidden;
+        }
+
+        .show-img {
+            position: absolute;
+            bottom: 50%;
+            right: 50%;
+        }
+
+        .par {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .chil {
+
+        }
     </style>
 </head>
+
 <body>
-    
+    <div>w3cschool</div>
+    <div class="parent">
+        <div class="children">
+            w3cschool
+        </div>
+    </div>
+
+
+    <div id="parent">
+        <div id="children">
+
+        </div>
+    </div>
+
+    <div class="img">
+        <p>
+            <img class="hidden-img" src="http://nec.netease.com/img/s/1.jpg" alt="" />
+            <img class="show-img" src="http://nec.netease.com/img/s/1.jpg" alt="" />
+        </p>
+    </div>
+
+
+    <div class="par">
+        <div class="chil">我是通过flex的水平垂直居中噢！</div>
+    </div>
+
 </body>
+
 </html>
