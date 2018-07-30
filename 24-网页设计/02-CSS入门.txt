@@ -125,6 +125,184 @@ CSS选择器汇总(9种)
 20.x::first-line
 21.x:nth-child(n)
 
+
+样式参考
+
+1.与默认样式一致的
+  默认的任何块元素的样式高度几乎都为auto
+
+  2. body,p,h1-16 元素的padding默认为0
+  
+  3.span/a/em/cite/i/b/strong 等行内元素默认为display:inline;
+
+    li本身就display:block的
+	
+
+参考全集
+
+一.字体(font)
+font-size:x-large(字体大小)
+font-style:notmal (样式)
+line-height:normal(行高)
+font-weight:blod(粗细)
+font-variant:small-caps;(变体)
+text-transform:none(大小写)
+text-decoration:none(修饰)
+
+二常用字体(font-family) 
+'courier new','monospace'
+
+三.背景属性
+background-color  色彩
+background-image 图片
+background-repeat 重复
+background-position 位置
+background-attachment 滚动 fixed(固定),scoll(滚动)
+background:#ccc url('') repart-x fixed left top
+
+四.区块属性(block)
+letter-spacing:normal;(字体间距)
+text-align;center;(字体对齐方式)
+text-indent:3px;(缩进)
+vertical-align:middle(垂直对齐方式)
+word-spacing:normal;(词间距)
+white-space:normal;(空格)
+display:block;(块) inline(内嵌) list-item(列表)
+
+五,方框属性(box)
+width,height,float,clear,margin,padding (上右下左)
+
+六.边框属性(border)
+border-style:solid(实线),dashed(虚线)
+
+七.列表属性(list-style)
+list-style-type
+list-style-position
+list-style-image
+
+八.定位属性(postion)
+postion :absolute,relative,static,fixed
+clip:rect(12,auto,12,auto) 裁切
+
+九,文字属性
+1. color : #999999; /*文字颜色*/
+2. font-family : 宋体,sans-serif; /*文字字体*/
+3. font-size : 9pt; /*文字大小*/
+4. font-style:itelic; /*文字斜体*/
+5. font-variant:small-caps; /*小字体*/
+
+6. letter-spacing : 1pt; /*字间距离*/
+
+7. line-height : 200%; /*设置行高*/
+
+8. font-weight:bold; /*文字粗体*/
+
+9. vertical-align:sub; /*下标字*/
+
+10. vertical-align:super; /*上标字*/
+
+11. text-decoration:line-through; /*加删除线*/
+
+12. text-decoration: overline; /*加顶线*/
+
+13. text-decoration:underline; /*加下划线*/
+
+14. text-decoration:none; /*删除链接下划线*/
+
+15. text-transform : capitalize; /*首字大写*/
+
+16. text-transform : uppercase; /*英文大写*/
+
+17. text-transform : lowercase; /*英文小写*/
+
+18. text-align:right; /*文字右对齐*/
+
+19. text-align:left; /*文字左对齐*/
+
+20. text-align:center; /*文字居中对齐*/
+
+21. text-align:justify; /*文字分散对齐*/
+
+vertical-align属性
+
+22. vertical-align:top; /*垂直向上对齐*/
+
+23. vertical-align:bottom; /*垂直向下对齐*/
+
+24. vertical-align:middle; /*垂直居中对齐*/
+
+25. vertical-align:text-top; /*文字垂直向上对齐*/
+
+26. vertical-align:text-bottom; /*文字垂直向下对齐*/
+
+十. CSS边框空白
+
+1. padding-top:10px; /*上边框留空白*/
+
+2. padding-right:10px; /*右边框留空白*/
+
+3. padding-bottom:10px; /*下边框留空白*/
+
+4. padding-left:10px; /*左边框留空白
+
+
+/*
+ 关于CSS样式表的覆盖优先级问题
+ 
+ １.样式表的元素选择器越精确，则其中的样式优先级越高
+ 
+  id>class>元素
+  
+ 
+ 
+ ２.对于相同类型的选择器制定的样式．在样式表文件中，越靠后，优先级越高
+ 
+ 
+ 3.提升样式优先级,可以使用!important
+ 
+ 
+ 4.关于继承中发生样式冲突时,最近祖先获胜\
+ 
+ 5.继承样式和直接指定的样式冲突时,直接指定样式获胜
+ 
+ 6.直接指定样式发生冲突时,样式权值高的获胜
+ 
+ 7.样式权值相同时,靠后者获胜
+
+*/
+
+
+
+/*
+  样式权值表
+  
+   标签选择器 =>1    
+   类选择器=>10
+   id选择选择器=>100
+   内联样式=>1000
+   伪元素=>1
+   伪类=>10
+
+
+*/
+
+/*
+   设置透明度
+   filter:alpha(opacity=30);
+   opacity:0.3;
+   
+   布局流程及实例
+  
+   全局样式   global.css
+   框架布局   layout.css
+   字体样式   font.css
+   链接样式  link.css
+   打印样式  print.css 
+  
+二,常用的类/id命名规范
+  
+   
+
 */
 
 

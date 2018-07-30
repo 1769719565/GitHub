@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>设置透明度</title>
+    <style type="text/css">
+        section {
+            border: 1px solid ;
+        }
+
+        section {
+            margin-top: 10px;
+            margin-left: 10px;
+            margin-right: 13px;
+            text-align: center;
+            width: 200px;
+            border-radius: 20px;
+            height: 200px;
+        }
+
+        .parent {
+             display: flex;
+             flex-direction: column;
+             flex-wrap:wrap;
+            /* display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;*/
+            height: 440px;
+            width: 660px; 
+        }
+
+        .parent section:first-child {
+            /* height: 410px; */
+        }
+    </style>
+</head>
+
+<body>
+    <section class="parent">
+        <section>A</section>
+        <section>B</section>
+        <section>C</section>
+        <section>D</section>
+        <section>E</section>
+    </section>
+
+
+</body>
+
+</html>

@@ -1,0 +1,89 @@
+/*
+  Emmet使用手册
+  后代:>
+  nav>ul>li
+   <nav>
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </nav>
+	
+   兄弟元素:+
+   div+p+bq   
+      <div></div>
+   <p></p>
+   <blockquote></blockquote>
+   
+	上级元素 ^
+  div+div>p>span>em^bq
+  <div></div>
+	<div>
+		<p><span></span><em></em></p>
+		<blockquote></blockquote>
+	</div>  	
+
+	 分组()
+	  div>(header>ul>li*2>a)+foot>p
+    <div>
+        <headder>
+            <ul>
+                <li>
+                    <a href=""></a>
+                </li>
+                <li>
+                    <a href=""></a>
+                </li>
+            </ul>
+        </headder>
+        <footer>
+            <p></p>
+        </footer>
+    </div>
+	
+	乘法 *
+	
+	自增符号 $
+	h$[title=item$]{header $}*3
+	<h1 title="item1">header 1</h1>
+	<h2 title="item2">header 2</h2>
+	<h3 title="item3">header 3</h3>
+	
+	ul>li.item$$$*5
+	<ul>
+		<li class="item001"></li>
+		<li class="item002"></li>
+		<li class="item003"></li>
+		<li class="item004"></li>
+		<li class="item005"></li>
+    </ul>
+
+   ul>li.item$@-*5
+	<ul>
+		<li class="item5"></li>
+		<li class="item4"></li>
+		<li class="item3"></li>
+		<li class="item2"></li>
+		<li class="item1"></li>
+	</ul>
+
+	   ul>li.item$@2*5
+	<ul>
+		<li class="item2"></li>
+		<li class="item3"></li>
+		<li class="item4"></li>
+		<li class="item5"></li>
+		<li class="item6"></li>
+	</ul>
+	
+	
+文本:{}
+	
+	
+	
+	
+	
+	
+*/
