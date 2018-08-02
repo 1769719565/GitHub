@@ -1,0 +1,163 @@
+/*
+ border规则
+ 1.body的默认样式为 'helvetical nenu'
+ 2.设置的广西的默认字体为14px
+ 3.默认的行高为1.428521
+ 4.默认的文本颜色为#333
+ 5.默认的背景颜色为white
+
+
+网格系统
+
+1.行必须存放在.container中，以便于得到适应和边距
+2.使用行来创建水平组
+3.内容应该放在列内，且只有列是行的直接子元素 
+4.预定义的网类，例如.row,col-xs-4,可用于快速创建网格布局，less混合类可用于更多的语义布局
+5.列通过内边距(padding)来创建列内容之间的间隙，该内边距是通过.rows上的外边距(margin)取负，
+表示第一列和最后一列的行偏移
+6.网格系统是通过指定您想要的横跨十二个可用的列来创建
+
+
+媒体查询 
+
+超小设备(x<768)
+ col-xs
+小型设备 (>=768)
+col-sm
+中型设备(>=992) 
+col-md
+大型设备(x>=1200)
+col-lg
+
+col-xs=*类不支持偏移，但是可以使用空的单元格实现 
+
+col-md-offset-3（偏移列）
+
+col-md-push-3 （列排序）
+
+.small 字号更小，颜色更浅的文本 设置的文本为父文本的的85%左右 
+
+.lead 使段落突出显示
+
+strong 设置文本更粗
+
+em 文本为斜体
+
+text-align 
+text-left
+text-right 
+text-justify 
+text-norwap 
+text-lowsercase 
+text-uppercase 
+text-capitailize 
+list-unstyled 
+list-liline 
+
+
+
+table 添加基础样式 
+thread 表格标题行的容器元素，用于标识表格
+thbody 表格主体中的表格行的容器元素
+
+.table    添加基础样式
+.table-striped  thbody中添加斑马线
+.table-bordered 表格的单元格中添加边框
+.table-hover thbody内的任一行启用鼠标悬停 
+.table-condensed 使表格更紧凑
+
+
+表单创建的基本步骤
+
+1.向form元素中添加 role="form"
+2.将标签和控件存放在一个带有class="form-group"的div中，这是获取最佳间距必需的
+3.向所有的文本元素<input><textarea><select> 添加.class="form-control"
+
+
+垂直（默认） from
+
+水平 （form-inline）
+
+内联(form-horzontal)
+
+静态控件 (form-control-static)
+
+
+表单控件状态 
+
+:focus状态(获取焦点)
+
+输入框焦点
+
+禁用的输入框
+
+禁用的字段集fieldset
+
+验证状态
+
+对父元素简单的添加适当的 clas (.has-waring,.has-error, .has_success)
+即可使用验证状态
+
+表单帮助文本（help-block）
+
+
+按钮 
+.btn  基本样式 
+.btn-default  默认标准按钮 
+.btn-primary   原始按钮状态 
+.btn-success   表示成功的按钮 
+.btn-info     用于要弹出信息的按钮 
+.btn-warning  需要谨慎操作
+.btn-danger   危险操作
+.btn-link     链接
+.btn-lg      
+.btn-sm 
+.btn-xs 
+.btn-block   块级按钮(拉伸至父级元素100%的宽度)
+.active  （按钮被点击）
+.disabled (禁用)
+
+
+ 图片 
+
+ img-rounded  添加border-radius:6px 来获取图片的圆角
+ img-circle   添加border-radius:500px 来让整个图片变成圆形（将图片变为圆形）
+ img-thumbnail:添加一个内边距(padding)和一个灰色的边框 （缩略图功能 ）
+ img-responsive
+
+
+
+ 辅助类
+
+文本
+  .text-muted 
+  .text-primary 
+  .text-success 
+  .text-info 
+  .text-warning 
+  .text-danger 
+
+背景
+  .bg-primary 
+  .bg-success 
+  .bg-info 
+  .bg-warning 
+  .bg-danger 
+
+其它 
+ .pull-left  元素浮动左侧
+ .pull-righ  元素浮动右侧
+ .center-block 元素为display:block并且居中显示 
+ .clearfix  清除浮动
+ .show   强制显示元素 
+ .hidden 强制隐藏元素 
+ .sr-only  	除了屏幕阅读器外，其他设备上隐藏元素
+ .sr-only-focusable 与 .sr-only 类结合使用，在元素获取焦点时显示(如：键盘操作的用户)
+ .text-hide  将页面元素所包含的文本内容替换为背景图
+ .close  	显示关闭按钮
+ .caret  显示下拉式功能
+
+ 响应式工具类
+
+
+*/
