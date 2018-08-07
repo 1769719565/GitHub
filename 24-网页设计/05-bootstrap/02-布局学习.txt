@@ -131,6 +131,24 @@
         </ul>
     </div>
 
+    <!-- 导航->胶囊式 :添加垂直式:nav-stacked  -->
+    <div id="nav1" style=" margin-top:3%;">
+        <ul class="nav nav-pills nav-stacked">
+            <li role="presentation" class="active">
+                <a href="#">Home</a>
+            </li>
+            <li role="presentation">
+                <a href="#">Profile</a>
+            </li>
+            <li role="presentation" class="disabled">
+                    <a href="#">disabled</a>
+                </li>
+            <li role="presentation">
+                <a href="#">Messages</a>
+            </li>
+        </ul>
+    </div>
+
   默认样式的导航条
    两端对齐的导航条导航链拉已经被弃用
     1.导航条内所包含的元素溢出
@@ -158,25 +176,15 @@
 
    反色导航条  .navbar-inverse
 
-
 8.面包屑导航 
-    <!-- 导航->胶囊式 :添加垂直式:nav-stacked  -->
-    <div id="nav1" style=" margin-top:3%;">
-        <ul class="nav nav-pills nav-stacked">
-            <li role="presentation" class="active">
-                <a href="#">Home</a>
-            </li>
-            <li role="presentation">
-                <a href="#">Profile</a>
-            </li>
-            <li role="presentation" class="disabled">
-                    <a href="#">disabled</a>
-                </li>
-            <li role="presentation">
-                <a href="#">Messages</a>
-            </li>
-        </ul>
-    </div>
+ 
+  <!-- 面包屑导航 -->
+ <ol class="breadcrumb">
+  <li><a href="#">Home</a></li>
+  <li><a href="#">Library</a></li>
+  <li class="active">Data</li>
+</ol>
+  
 
 9.分页
 

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>分页（pagination）</title>
+    <!-- 引入 Bootstrap -->
+    <link href="http://libs.baidu.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+    <!-- HTML5 Shim 和 Respond.js 用于让 IE8 支持 HTML5元素和媒体查询 -->
+    <!-- 注意： 如果通过 file://  引入 Respond.js 文件，则该文件无法起效果 -->
+    <!--[if lt IE 9]>          
+                     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>        
+                     <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>       
+    <![endif]-->
+</head>
+
+<body>
+    <!-- 分页条 -->
+    <nav>
+        <ul class="pagination pagination-lg">
+            <!-- 添加激活状 -->
+            <li class="active">
+                <a href="#">
+                    <span>&laquo;</span>
+                </a>
+
+            </li>
+            <li>
+                <a href="#">1</a>
+            </li>
+            <!-- 添加禁用状态 -->
+            <li class="disabled">
+                <a href="#">3</a>
+            </li>
+            <li>
+                <a href="#">5</a>
+            </li>
+            <li>
+                <a href="#">6</a>
+            </li>
+            <li>
+                <a href="#">
+                    <span>&raquo;</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+   <nav>
+       <!-- 添加默认分页：pager -->
+       <ul class="pager">
+           <!--左对齐:previous  -->
+           <li class="previous"><a href="#">Previous</a></li>
+           <!--右对齐：next  -->
+           <li class="next"><a href="#">Next</a></li>
+       </ul>
+   </nav>
+
+
+</body>
+
+</html>
+<script src="https://cdn.bootcss.com/jquery/2.2.0/jquery.js"></script>
+<script src="http://libs.baidu.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
