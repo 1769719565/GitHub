@@ -1,16 +1,4 @@
 /*
-媒体查询 
-
-超小设备(x<768)
- col-xs
-小型设备 (>=768)
-col-sm
-中型设备(>=992) 
-col-md
-大型设备(x>=1200)
-col-lg
-
- 
  border规则
  1.body的默认样式为 'helvetical nenu'
  2.设置的广西的默认字体为14px
@@ -28,6 +16,18 @@ col-lg
 5.列通过内边距(padding)来创建列内容之间的间隙，该内边距是通过.rows上的外边距(margin)取负，
 表示第一列和最后一列的行偏移
 6.网格系统是通过指定您想要的横跨十二个可用的列来创建
+
+
+媒体查询 
+
+超小设备(x<768)
+ col-xs
+小型设备 (>=768)
+col-sm
+中型设备(>=992) 
+col-md
+大型设备(x>=1200)
+col-lg
 
 col-xs=*类不支持偏移，但是可以使用空的单元格实现 
 
@@ -80,7 +80,7 @@ thbody 表格主体中的表格行的容器元素
 
 内联(form-horzontal)
 
-静态控件 (form-control-static)=>纯文本
+静态控件 (form-control-static)
 
 
 表单控件状态 
@@ -88,15 +88,18 @@ thbody 表格主体中的表格行的容器元素
 :focus状态(获取焦点)
 
 输入框焦点
-选中样式状态.active
-禁用的输入框 disabled
+
+禁用的输入框
+
 禁用的字段集fieldset
+
 验证状态
+
 对父元素简单的添加适当的 clas (.has-waring,.has-error, .has_success)
 即可使用验证状态
-表单帮助文本（help-block）=>用于上传附件时添加的提示
 
-xs=>sm=>md=>lg
+表单帮助文本（help-block）
+
 
 按钮 
 .btn  基本样式 
@@ -120,14 +123,14 @@ xs=>sm=>md=>lg
  img-rounded  添加border-radius:6px 来获取图片的圆角
  img-circle   添加border-radius:500px 来让整个图片变成圆形（将图片变为圆形）
  img-thumbnail:添加一个内边距(padding)和一个灰色的边框 （缩略图功能 ）
- img-responsive:响应式
+ img-responsive
 
 
 
  辅助类
 
 文本
-  .text-muted  (鼠标悬停时，颜色加深))
+  .text-muted 
   .text-primary 
   .text-success 
   .text-info 
@@ -155,8 +158,8 @@ xs=>sm=>md=>lg
  .caret  显示下拉式功能
 
  响应式工具类
- visible-*
- 具体请参考
- https://www.w3cschool.cn/bootstrap/bootstrap-responsive-utilities.html
+
+ 
+
 
 */

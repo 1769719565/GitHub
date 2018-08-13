@@ -1,20 +1,190 @@
 布局组件 
 
 1 字体图标
+  出于对性能的考虑，所有的图标都需要一个基类和对应的每个图标的类，为保证使用，图标与文本之间需要一个空格
+  glyphicon glyphicon-sort-by-attributes
+   
+   注意 
+    1.不要和其它组件混合使用 
+     图标类与能和其它组件联合使用，它们不能在同一个元素上，与其它类共同存在，应该创建一个嵌套的<span>标签，并将图标
+     类应用到这个<span>上
+    
+    2.只对内容为宽的元素起作用
+    图标类只能应用在不包含任何文本内容或子元素的元素上
+
+    3.改变图标字体文件的位置 
+    boostrap默认所有的图标字体文件全部存放在../fonts/中
+
+    4.图标的可访问性
+    为图标添加 aria-hidden="true" 属性
+    包含额外的内容可以通过.sr-only类实现隐藏效果
+
+    如果创建的组件不包含任何内容。只包含一个图标。可以添加 aria-lable属性
 
 2.下拉菜单 
+  <div class="dropdown">
+        <button class="btn btn-default dropdown-toggle" data-toggle="dropdown" id="dropdown" aria-haspopup="true" aria-expanded="true">
+            <!-- 填充按钮内容 -->
+            DropdownList
+            <span class="caret"></span>
+        </button>
+        <!-- 下拉框内容 -->
+        <ul class="dropdown-menu dropdown-menu-left" aria-labelledby="dropdown">
+            <li class="dropdown-header">
+                dropdown header
+            </li>
+            <li>
+                <a href="#">
+                    Action
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    Another action
+                </a>
+            </li>
+            <!-- 禁用菜单-->
+            <li class="disabled">
+                <a href="#">diabled link</a>
+            </li>
+
+            <li>
+                <a href="#">
+                    Something else here
+                </a>
+            </li>
+            <!-- 添加虛线 -->
+            <li role="separator" class="divider"></li>
+            <li>
+                <a href="">
+                    Separated link
+                </a>
+            </li>
+        </ul>
+    </div>
+
 
 3.按钮组
+  1.按钮组中的工具提示和弹出框需要特别注意的设置 
+  当为.btn-group中的元素应用工具提示或弹出框时，必须指定container:'body'选项
+2.确保设置正确的role属性，并提供一个lable标签 
+  按钮组 role="group"
+  工具栏 role="tollbar"
+  表单   role="form"
+  按钮组垂直排列 btn-group-vertical
+
+  关于两端对齐排列的按钮组
+   关于边框的处理 
+     使用了特定的dispaly:table-cell 将两个按钮叠加一块
+     普通的按钮组中 margin-left:-1px;用于边框重叠
+
+   ie8和边框的处理 
+    将每个按钮组放入另一个.btn-group中
+   
+   分裂式按钮
+        <div class="btn-group">
+        <buton class="btn btn-danger">Action</buton>
+        <button class="btn btn-danger dropdown-toggle" data-toggle="dropdown">
+            <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu">
+            <li><a href="http://">Action</a></li>
+            <li><a href="http://">Another action</a></li>
+            <li><a href="http://">Something else here</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="http://">Separated link</a></li>
+        </ul>
+    </div>
+
+    输入框组
+     <input>前面，后面或是两边都加上文字或按钮，可以实现对表单的控件的扩展。为
+     .input-group赋予.input-group.addon或.input-group-btnod类，可以 
+     给.form-control的前面或后面添加额外的元素 
+
+     只支持文本输入框<input>
+     输入框组中的工具(tootip)提示和弹出框(popover)需要特别的设置 container:'body'
+      
+    不要和其它组件混用
+     还要将表单组或栅栏系统类直接和输入框组混合使用 ，而是将输入框组嵌套到表单组中或内部元素中
 
 4.按钮菜单 
 
 5.输入框
 
 6.导航元素
+   确保导航元素的可访问性
+    如果你在使用导航组件中实现导航条功能，务必在<ul>的最外侧的逻辑父元素上添加 role="navigation"属性
 
 7.导航栏
+  <!-- 导航->标签类型导航 两端对齐：nav-justified-->
+    <div id="nav" style=" margin-top:3%;">
+        <ul class="nav nav-tabs nav-justified">
+            <li role="presentation" class="active">
+                <a href="#">Home</a>
+            </li>
+            <li role="presentation">
+                <a href="#">Profile</a>
+            </li>
+            <li role="presentation">
+                <a href="#">Messages</a>
+            </li>
+        </ul>
+    </div>
+
+    <!-- 导航->胶囊式 :添加垂直式:nav-stacked  -->
+    <div id="nav1" style=" margin-top:3%;">
+        <ul class="nav nav-pills nav-stacked">
+            <li role="presentation" class="active">
+                <a href="#">Home</a>
+            </li>
+            <li role="presentation">
+                <a href="#">Profile</a>
+            </li>
+            <li role="presentation" class="disabled">
+                    <a href="#">disabled</a>
+                </li>
+            <li role="presentation">
+                <a href="#">Messages</a>
+            </li>
+        </ul>
+    </div>
+
+  默认样式的导航条
+   两端对齐的导航条导航链拉已经被弃用
+    1.导航条内所包含的元素溢出
+     减少导航条内所有元素所占据的宽度
+     要某些尺寸的屏幕上
+     修改导航条在水平排列和折叠排列互相转化
+
+    2.依赖javascript插件
+
+    3.修改视口的阈值，从而影响导航条的排列模式 
+
+    4.导航条的可访问性
+
+  品牌图标 
+
+  <img>
+
+ 
+ 导航条  
+   固定在头部 .navbar-fixed-top
+
+   固定在底部.navbar-fixed-bottom
+
+   静态在头部 .navbar-static-top
+
+   反色导航条  .navbar-inverse
 
 8.面包屑导航 
+ 
+  <!-- 面包屑导航 -->
+ <ol class="breadcrumb">
+  <li><a href="#">Home</a></li>
+  <li><a href="#">Library</a></li>
+  <li class="active">Data</li>
+</ol>
+  
 
 9.分页
 
