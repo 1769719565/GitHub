@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+sourceField 数据源的字段名称，可以重复填充到多个目标字段，当有default属性或者isGuid="true"（自动生成GUID）或者 isBSM="true"(自动生成序列BSM，要求数据库存在表名_BSM的序列) 时可以为空，
+targetField 目标表的字段名称（此属性不可重复，而且不能为空）
+default代表默认值
+type 字段类型，默认不填时为string,另外可以设置为number或者datetime
+dic为字典名称，对应transform.xml的字典映射的字典名称
+Alias为字段注释，无实际用途，方便理解
+length为字段限制长度，如果超长会截图字符串保存到数据库，防止数据库插入失败，注意中文相比Oracle是1:2
+isFile是否是附件
+-->
+<BusinessConfig>
+    <Tables>
+        <!--办理结果信息-->
+        <Table Name="YMYW_EXAMINATION" Alias="审批意见" Sql="select c.fsbsx,c.fsblsh,a.jid,b.fdjjg,b.fjgdm,b.fqxdm,a.fslr,'' as fslzt,'' as fbslyy,'' as fslhzh,a.fslsj,'' as fbz,1 as fflag,'' as fsxbbh,'' as fqzhbs,c.CLJSTZS
+				from job_sjdjb a inner join job_dbxxb b on a.jid=b.jid inner join JOB_WWSBXX c on a.jid=c.jid where a.jid = '{0}'">
+            <Field targetField="gid" isGuid="true" type="string" Alias="唯一标识"/>
+            <Field targetField="SBLSH" sourceField="FSBLSH" type="string" Alias="业务号"/>
+            <Field targetField="XZQHDM" default="441303" type="string" Alias="审批部门所在地行政区域代码"/>
+            <Field targetField="SPBMZZJGDM" default="11441303007194549B" type="string" Alias="审批部门组织机构代码"/>
+            <Field targetField="SPBMMC" default="惠州市国土资源局惠阳区分局" type="string" Alias="审批部门名称"/>
+            <Field targetField="SPHJMC" targetField="ATTACH_PATH" Alias="审批环节名称"/>
+            <Field targetField="SPRXM" targetField="ATTACH_PATH" type="string" Alias="审批人姓名"/>
+            <Field targetField="SPYJ" targetField="ATTACH_PATH" type="string" Alias="审批意见"/>
+            <Field targetField="SPSJ" targetField="ATTACH_PATH" type="string" Alias="审批时间"/>
+            <Field targetField="SPJG" targetField="ATTACH_PATH" type="string" Alias="审批结果"/>
+            <Field sourceField="BZ" targetField="ATTACH_PATH" type="string" Alias="备注"/>
+        </Table>
+        <!-- 出证房产信息 -->
+        <Table Name="YMYW_CZFCZXX" Alias="出证房产信息" Sql="select c.fsbsx,c.fsblsh,a.jid,b.fdjjg,b.fjgdm,b.fqxdm,a.fslr,'' as fslzt,'' as fbslyy,'' as fslhzh,a.fslsj,'' as fbz,1 as fflag,'' as fsxbbh,'' as fqzhbs,c.CLJSTZS
+				from job_sjdjb a inner join job_dbxxb b on a.jid=b.jid inner join JOB_WWSBXX c on a.jid=c.jid where a.jid = '{0}'">
+            <Field targetField="gid" isGuid="true" type="string" Alias="唯一标识"/>
+            <Field targetField="FWBM" sourceField="FSBLSH" type="string" Alias="房屋编码"/>
+            <Field targetField="ZL" default="441303" type="string" Alias="坐落"/>
+            <Field targetField="GYFS" default="11441303007194549B" type="string" Alias="共有方式"/>
+            <Field targetField="BDCDYH" default="惠州市国土资源局惠阳区分局" type="string" Alias="不动产单元号"/>
+            <Field targetField="BDCLX" targetField="ATTACH_PATH" Alias="不动产类型"/>
+            <Field targetField="ZDQLXZ" targetField="ATTACH_PATH" type="string" Alias="宗地权利性质"/>
+            <Field targetField="FWXZ" targetField="ATTACH_PATH" type="string" Alias="房屋性质"/>
+            <Field targetField="ZDMJ" targetField="ATTACH_PATH" type="string" Alias="宗地面积"/>
+            <Field targetField="JZMJ" targetField="ATTACH_PATH" type="string" Alias="建筑面积"/>
+            <Field sourceField="ZYJZMJ" targetField="ATTACH_PATH" type="string" Alias="专有建筑面积"/>
+            <Field sourceField="FTJZMJ" targetField="ATTACH_PATH" type="string" Alias="分摊建筑面积"/>
+            <Field sourceField="TDYT" targetField="ATTACH_PATH" type="string" Alias="土地用途"/>
+            <Field sourceField="FWYT" targetField="ATTACH_PATH" type="string" Alias="房屋用途"/>
+            <Field sourceField="FWJG" targetField="ATTACH_PATH" type="string" Alias="房屋结构"/>
+            <Field sourceField="SZC" targetField="ATTACH_PATH" type="string" Alias="所在层"/>
+            <Field sourceField="ZCS" targetField="ATTACH_PATH" type="string" Alias="总层数"/>
+            <Field sourceField="JGSJ" targetField="ATTACH_PATH" type="string" Alias="竣工时间"/>
+            <Field sourceField="SYQX" targetField="ATTACH_PATH" type="string" Alias="使用期限"/>
+            <Field sourceField="YHLX" targetField="ATTACH_PATH" type="string" Alias="用海类型"/>
+            <Field sourceField="GZWLX" targetField="ATTACH_PATH" type="string" Alias="构筑物类型"/>
+            <Field sourceField="LZ" targetField="ATTACH_PATH" type="string" Alias="林种"/>
+            <Field sourceField="DJSJ" targetField="ATTACH_PATH" type="string" Alias="登记时间"/>
+            <Field sourceField="DJJG" targetField="ATTACH_PATH" type="string" Alias="登记机关"/>
+        </Table>
+       <!-- 出证权利人信息  -->
+        <Table Name="YMYW_CZQLRXX" Alias="出证权利人信息" Sql="select c.fsbsx,c.fsblsh,a.jid,b.fdjjg,b.fjgdm,b.fqxdm,a.fslr,'' as fslzt,'' as fbslyy,'' as fslhzh,a.fslsj,'' as fbz,1 as fflag,'' as fsxbbh,'' as fqzhbs,c.CLJSTZS
+				from job_sjdjb a inner join job_dbxxb b on a.jid=b.jid inner join JOB_WWSBXX c on a.jid=c.jid where a.jid = '{0}'">
+            <Field targetField="gid" isGuid="true" type="string" Alias="唯一标识"/>
+            <Field targetField="QLRMC" sourceField="FSBLSH" type="string" Alias="权利人名称"/>
+            <Field targetField="ZJZL" default="441303" type="string" Alias="证件种类"/>
+            <Field targetField="ZJHM" default="11441303007194549B" type="string" Alias="证件号码"/>
+            <Field targetField="GYFS" default="惠州市国土资源局惠阳区分局" type="string" Alias="共有方式"/>
+            <Field targetField="GYQK" targetField="ATTACH_PATH" Alias="共有情况"/>
+            <Field targetField="GYQK" targetField="ATTACH_PATH" type="string" Alias="持有份额"/>
+            <Field targetField="BDCQZH" targetField="ATTACH_PATH" type="string" Alias="不动产权证号"/>
+        </Table>
+    </Tables>
+</BusinessConfig>
