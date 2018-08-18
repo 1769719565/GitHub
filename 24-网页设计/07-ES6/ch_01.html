@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>变量的解构与赋值</title>
+    <script>
+        function* fibs() {
+            let a = 0;
+            let b = 1;
+            while (true) {
+                yield a;
+                [a, b] = [b, a + b];
+            }
+        }
+        let [first, second, third, fourth, fifth, sixth] = fibs();
+        // console.log(sixth); //5
+
+        //添加默认值
+        let [foo = true] = [];
+        // console.log(foo); //true
+        let [x, y = 'b'] = ['a'];
+        //console.log(y); //x=>a,y=>b
+
+        /*
+         ES6中使用严格相等的(===),判断一个位置是否有值,
+         故此只有数组值严格等于undefined时,才会生效
+        */
+        let [key, value = 'c'] = ['f', undefined];
+        //console.log(value); //key=>f,value=>c
+
+        let [m = 1, k] = [undefined, null];
+        //console.log(k); //m=>1,k=>null
+
+        function fun_f() {
+            console.log('江山如此多娇');
+        }
+        let [item = fun_f()] = [];
+
+
+        //对象的解构赋值
+        let {
+            bdcqzh,
+            qlr
+        } = {
+            'bdcqzh': '粤不动产权第12345号',
+            'qlr': '宋登科'
+        };
+        // console.log(bdcqzh); //粤不动产权第12345号
+
+        //对于变量名与属性名不一致的问题,处理办法
+        let {
+            dyr: baz
+        } = {
+            dyr: 'aaa',
+            bar: 'bbbb'
+        };
+        //console.log(baz); //aaa
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
